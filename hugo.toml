@@ -1,0 +1,19 @@
+baseURL = "https://londonaero.space/"
+locale = "en-GB"
+title = "London Aerospace"
+
+# Single page site: no taxonomies, no section pages, no RSS.
+disableKinds = ["taxonomy", "term", "section", "rss"]
+
+# Pin the Hugo version (also set HUGO_VERSION=0.163.3 in Cloudflare Pages).
+[module]
+  [module.hugoVersion]
+    extended = true
+    min = "0.163.3"
+
+[params]
+  eyebrow = "EMF Camp 2026 · Eastnor · 16–19 July"
+  # Canonical external links (see SPEC.md §1)
+  emfVillageURL = "https://www.emfcamp.org/villages/2026/44-london-aerospace"
+  emfMapURL = "https://map.emfcamp.org/#18.5/52.04047510342522/-2.376049358148265/m=52.04047510342522,-2.376049358148265"
+  emfWorkshopURL = "https://www.emfcamp.org/schedule/2026/263-tiny-drones-in-the-big-top"

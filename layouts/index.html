@@ -1,0 +1,45 @@
+{{ define "main" }}
+<main>
+  <header class="hero">
+    <img src="/logo.png" alt="London Aerospace tiny-whoop drone logo" width="160" height="160">
+    <p class="eyebrow">{{ .Site.Params.eyebrow }}</p>
+    <h1>{{ .Title }}</h1>
+    <p class="strapline">{{ .Params.strapline }}</p>
+  </header>
+
+  <section aria-labelledby="about-heading">
+    <h2 id="about-heading">About the village</h2>
+    {{ .Content }}
+  </section>
+
+  <section class="workshop" aria-labelledby="workshop-heading">
+    <h2 id="workshop-heading">Tiny Drones in the Big Top</h2>
+    <p>{{ .Params.workshop.intro }}</p>
+    <ul>
+      {{ range .Params.workshop.facts }}
+      <li>{{ . }}</li>
+      {{ end }}
+    </ul>
+    <p class="note">{{ .Params.workshop.note }}</p>
+    <p><a class="button" href="{{ .Site.Params.emfWorkshopURL }}">Date &amp; time on the EMF schedule</a></p>
+  </section>
+
+  <section aria-labelledby="findus-heading">
+    <h2 id="findus-heading">Find us on site</h2>
+    <p>{{ .Params.findUs }}</p>
+    <p><a class="button" href="{{ .Site.Params.emfMapURL }}">Village pin on the EMF map</a></p>
+  </section>
+
+  <section aria-labelledby="links-heading">
+    <h2 id="links-heading">Cool stuff</h2>
+    <ul class="links">
+      {{ range hugo.Data.links }}
+      <li>
+        <a href="{{ .url }}">{{ .title }}</a>
+        {{ with .note }}<span class="link-note"> — {{ . }}</span>{{ end }}
+      </li>
+      {{ end }}
+    </ul>
+  </section>
+</main>
+{{ end }}

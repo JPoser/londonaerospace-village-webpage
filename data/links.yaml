@@ -1,0 +1,7 @@
+# Cool stuff / links. Adding a link = adding an entry here; no HTML needed.
+# "note" is optional.
+- title: "TODO: Example link"
+  url: "https://example.com"
+  note: "TODO: One-line description of why it's cool"
+- title: "TODO: Another example link"
+  url: "https://example.com"
