@@ -17,10 +17,6 @@
     --muted: #aaa;
     --rule: #333;
   }
-  .hero img {
-    /* Black silhouette logo → white in dark mode */
-    filter: invert(1);
-  }
 }
 
 * {
