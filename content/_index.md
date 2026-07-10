@@ -1,20 +1,17 @@
 ---
 title: "London Aerospace"
 description: "The London Aerospace village at EMF Camp 2026"
-# One-line strapline under the wordmark. TODO: replace with final copy —
-# the official village blurb is used as a stand-in.
 strapline: "The ever increasingly misnamed and geographically disparate London Aerospace village. Swing by if you'd like to learn more about drone building, drone flying, drone crashing, and drone repairing."
 workshop:
-  intro: "TODO: One or two sentences introducing the workshop."
+  intro: "Returning to Stage A for one evening only, London Aerospace invite anyone of any skill level or equipment (or none) to come and get involved. We'll have video goggles you can ridealong through, radios and simulators to have a carefree go at trying your hand at flying."
   facts:
-    - "TODO: In the Big Top (Stage A), one evening only — check the schedule for the time. Free, all skill levels, no equipment needed."
-    - "TODO: FPV goggles for ridealongs, plus radios and simulators to try flying yourself."
-    - "TODO: Bring-your-own rules: nothing is suitable unless you'd happily fly it into your own face. Do not power up any gear on site until you've been briefed and allocated a frequency."
-  note: "Content note: there will be cameras flying around."
-findUs: "TODO: Short paragraph on where the village is pitched and what to look out for."
+    - "Come experience the thrilling tiny whoop ripping*"
+    - "We'll have FPV goggles for ridealongs, plus radios and simulators to try flying yourself."
+    - "Bring-your-own rules: nothing is suitable unless you'd happily fly it into your own face. Do not power up any gear on site until you've been briefed and allocated a frequency."
+  note: "There will be cameras flying around and we will be recording some of the onboard footage.\n*ripping not guaranteed, no refunds if you consider our ripping to be pootling"
+findUs: "We're in sector C3 next to Flux Passage, you can click the map if like me you are bad at those RPGs which try and make you do some basic orienteering. We'll be the ones in the funny shirts and silly goggles."
 ---
 
-TODO: About the village — one to three paragraphs. Who we are, what
-we're doing at camp, and why you should swing by.
+## About us
 
-TODO: Second paragraph if needed.
+We're a bunch of nerds who sometimes fly FPV quads and mostly don't live in London. Come find us if you want to talk about flying FPV, simulators, gear that won't get you in massive trouble and far too many RGB LEDs.

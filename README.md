@@ -28,6 +28,19 @@ Add an entry to **`data/links.yaml`**:
   note: "Why it's cool"   # optional
 ```
 
+## Add photos & videos (gallery)
+
+The gallery page at `/gallery/` shows photos and videos from past camps.
+
+- **Photos:** drop image files into `content/gallery/photos/`. Thumbnails and
+  web-sized WebP copies are generated at build time; the originals never
+  ship. The filename becomes the alt text, so name files descriptively, e.g.
+  `drone-repair-bench-2024.jpg`.
+- **Videos:** upload to YouTube, then add an entry to the `videos:` list in
+  `content/gallery/index.md`. For a poster thumbnail, drop a still into
+  `content/gallery/posters/` and point the entry's `poster:` at it —
+  optional; without one the video renders as a plain link.
+
 ## Publishing
 
 Push to `main` → Cloudflare Pages builds (`hugo --minify`) and deploys —

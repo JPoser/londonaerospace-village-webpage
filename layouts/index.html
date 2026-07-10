@@ -30,6 +30,12 @@
     <p><a class="button" href="{{ .Site.Params.emfMapURL }}">Village pin on the EMF map</a></p>
   </section>
 
+  <section aria-labelledby="gallery-heading">
+    <h2 id="gallery-heading">Previous camps</h2>
+    {{ with .Params.galleryIntro }}<p>{{ . }}</p>{{ end }}
+    <p><a class="button" href="/gallery/">Photos &amp; videos from past EMFs</a></p>
+  </section>
+
   <section aria-labelledby="links-heading">
     <h2 id="links-heading">Cool stuff</h2>
     <ul class="links">

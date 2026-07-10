@@ -166,3 +166,23 @@ Brief: **super simple, fast, legible.** The design should feel like it belongs t
 - [ ] Page weight < 100KB; Lighthouse 100/100/100.
 - [ ] Deployed to Cloudflare Pages, serving on https://londonaero.space with HTTPS.
 - [ ] README explains the edit → publish loop in under a screen of text.
+
+## 11. Amendment: gallery page (July 2026)
+
+Agreed deviation from §5's "single page": a second page at `/gallery/` — a
+single flat gallery of photos and videos from previous London Aerospace
+villages at EMF.
+
+- **Photos:** originals live in `content/gallery/photos/`; Hugo image
+  processing generates WebP thumbnails (grid, lazy-loaded) linking to
+  web-sized WebP copies. Originals are not published
+  (`build.publishResources: false`).
+- **Videos:** never embedded and never self-hosted — hosted on YouTube and
+  linked out via a static poster image (`content/gallery/posters/`)
+  with a CSS-only play badge. No iframes, no autoplay, still zero JS.
+- **Homepage impact:** one small "Previous camps" section linking to
+  `/gallery/`. The <100KB page-weight bar in §7 continues to apply to the
+  homepage; the gallery page is exempt from the byte target but keeps every
+  other bar (zero JS, Lighthouse 100s, semantic HTML).
+- Config in `content/gallery/index.md` front matter; template in
+  `layouts/gallery/single.html`.

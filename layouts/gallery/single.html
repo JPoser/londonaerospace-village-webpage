@@ -1,0 +1,57 @@
+{{ define "main" }}
+<main>
+  <header class="page-header">
+    <p class="eyebrow"><a href="/">&larr; London Aerospace</a></p>
+    <h1>{{ .Title }}</h1>
+    {{ with .Params.intro }}<p class="strapline">{{ . }}</p>{{ end }}
+  </header>
+
+  {{ .Content }}
+
+  {{ $page := . }}
+  {{ with .Params.videos }}
+  <section aria-labelledby="videos-heading">
+    <h2 id="videos-heading">Videos</h2>
+    <ul class="video-grid">
+      {{ range . }}
+      <li>
+        <a class="video-thumb" href="{{ .url }}">
+          {{ with .poster }}
+          {{ with $page.Resources.Get . }}
+          {{ $poster := .Filter images.AutoOrient }}
+          {{ $thumb := $poster.Fill "480x270 webp q75" }}
+          <span class="video-poster">
+            <img src="{{ $thumb.RelPermalink }}" width="{{ $thumb.Width }}" height="{{ $thumb.Height }}" alt="" loading="lazy" decoding="async">
+          </span>
+          {{ end }}
+          {{ end }}
+          <span class="video-title">{{ .title }} <span class="link-note">(YouTube)</span></span>
+        </a>
+      </li>
+      {{ end }}
+    </ul>
+  </section>
+  {{ end }}
+
+  {{ $photos := where (.Resources.Match "photos/*") "ResourceType" "image" }}
+  {{ with $photos }}
+  <section aria-labelledby="photos-heading">
+    <h2 id="photos-heading">Photos</h2>
+    <ul class="photo-grid">
+      {{ range . }}
+      {{ $img := .Filter images.AutoOrient }}
+      {{ $thumb := $img.Fill "480x360 webp q75" }}
+      {{ $w := $img.Width }}{{ if gt $w 1600 }}{{ $w = 1600 }}{{ end }}
+      {{ $full := $img.Resize (printf "%dx webp q80" $w) }}
+      {{ $alt := replaceRE "[-_]+" " " (path.BaseName .Name) }}
+      <li>
+        <a href="{{ $full.RelPermalink }}">
+          <img src="{{ $thumb.RelPermalink }}" width="{{ $thumb.Width }}" height="{{ $thumb.Height }}" alt="{{ $alt }}" loading="lazy" decoding="async">
+        </a>
+      </li>
+      {{ end }}
+    </ul>
+  </section>
+  {{ end }}
+</main>
+{{ end }}

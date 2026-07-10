@@ -1,7 +1,8 @@
 # Cool stuff / links. Adding a link = adding an entry here; no HTML needed.
 # "note" is optional.
-- title: "TODO: Example link"
-  url: "https://example.com"
-  note: "TODO: One-line description of why it's cool"
-- title: "TODO: Another example link"
-  url: "https://example.com"
+- title: "jposer's stupid Jacket"
+  url: "https://jacket.londonaero.space/jacket"
+  note: "I've been working on this for years and it actually works now, toot @jackbot.mastedon.social if you see it around."
+- title: "BetaFPV"
+  url: "https://betafpv.com"
+  note: "This is the gear most of us fly now."
