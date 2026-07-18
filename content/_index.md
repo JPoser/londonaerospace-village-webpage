@@ -15,3 +15,7 @@ findUs: "We're in sector C3 next to Flux Passage, you can click the map if like 
 ## About us
 
 We're a bunch of nerds who sometimes fly FPV quads and mostly don't live in London. Come find us if you want to talk about flying FPV, simulators, gear that won't get you in massive trouble and far too many RGB LEDs.
+
+### More LEDs
+
+We've hooked up an LED strip in our gazebo to a geiger counter. If you see it flashing white too frequently you might be radioactive.
